@@ -14,7 +14,7 @@ Isabel,Snatch 61 kg,30 reps for time
 Jackie,1000 meter row,Thruster 20 kg (50 reps),Pull-ups (30 reps),For time
 Karen,Wall-ball 150 shots(9kg),For time
 Kelly,Run 400 meters,30 box jump 24 inch box,30 Wall ball shots 9 kg ball,Five rounds for time
-Linda,Deadlift 1 1/2 BW,Bench BW,Clean 3/4 BW,10/9/8/7/6/5/4/3/2/1 rep rounds for time
+Linda,Deadlift 1 1/2 BW,Bench BW,Clean 3/4 BW,10/9/8/7/6/5/4/3/2/1 rounds for time
 Lynne,Bodyweight bench press,pullups,5 rounds for max reps
 Mary,5 Handstand push-ups,10 1-legged squats,15 Pull-ups,Amrap in 20 min
 Nancy,400 meter run,Overhead squat 43 kg x 15,5 rounds for time
