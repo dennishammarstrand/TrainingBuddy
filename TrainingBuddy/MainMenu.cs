@@ -17,7 +17,7 @@ namespace TrainingBuddy
             //Outer form editing
             ShowIcon = false;
             Text = "Training";
-            Size = new Size(375, 600);
+            Size = new Size(250, 250);
             Padding = new Padding(15);
             StartPosition = FormStartPosition.CenterScreen;
             FormBorderStyle = FormBorderStyle.FixedSingle;

@@ -17,7 +17,8 @@ namespace TrainingBuddy
         private DataGridView SplitTimes = new DataGridView { Visible = false, ColumnHeadersVisible = false, ColumnCount = 1, AutoSize = true, AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill, RowHeadersVisible = false, BackgroundColor = SystemColors.Control, BorderStyle = BorderStyle.None };
         int ms, sec, min, h;
         bool on = true;
-        private Label TabZero = new Label();
+        public Label TabZeroWorkoutChange = new Label { Font = new Font("San Serif", 15f), Anchor = AnchorStyles.Left, AutoSize = true, Dock = DockStyle.Fill };
+        public Button saveRecord = new Button { Visible = false, Text = "Save Record", Dock = DockStyle.Fill, AutoSize = true, Anchor = AnchorStyles.Left };
 
         public TimerMenu()
         {
@@ -31,13 +32,14 @@ namespace TrainingBuddy
             MaximizeBox = false;
 
             //Timer grid with all it's controls added
-            TableLayoutPanel timerGrid = new TableLayoutPanel { RowCount = 5, ColumnCount = 2, Dock = DockStyle.Fill, AutoSize = true };
+            TableLayoutPanel timerGrid = new TableLayoutPanel { RowCount = 6, ColumnCount = 2, Dock = DockStyle.Fill, AutoSize = true };
             timerGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30));
             timerGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30));
             timerGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
             timerGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 20));
             timerGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 20));
-            timerGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 20));
+            timerGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 10));
+            timerGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 10));
             timerGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 10));
             Controls.Add(timerGrid);
             timerGrid.Controls.Add(Watch);
@@ -51,10 +53,11 @@ namespace TrainingBuddy
             timerGrid.Controls.Add(split, 0, 2);
             timerGrid.SetColumnSpan(split, 2);
             timerGrid.Controls.Add(SplitTimes, 0, 3);
-            timerGrid.SetRowSpan(SplitTimes, 2);
-            timerGrid.Controls.Add(mainMenu, 1, 4);
-            timerGrid.Controls.Add(TabZero, 1, 3);
-            ActiveControl = TabZero;
+            timerGrid.SetRowSpan(SplitTimes, 3);
+            timerGrid.Controls.Add(mainMenu, 1, 5);
+            timerGrid.Controls.Add(TabZeroWorkoutChange, 1, 3);
+            ActiveControl = TabZeroWorkoutChange;
+            timerGrid.Controls.Add(saveRecord, 1, 4);
 
             //Event handlers
             Start.Click += StartTimer;

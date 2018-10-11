@@ -58,6 +58,17 @@ namespace TrainingBuddy
 
             mainMenu.Click += ReturnToMainWindow;
             GetWod.SelectedIndexChanged += ComboBoxChanged;
+            timeWorkout.Click += TimeWorkoutClickHandler;
+        }
+        private void TimeWorkoutClickHandler(object sender, EventArgs e)
+        {
+            Hide();
+            TimerMenu labelChange = new TimerMenu();
+            string[] s = wod[GetWod.SelectedIndex].Split(',');
+            labelChange.TabZeroWorkoutChange.Text = s[0];
+            labelChange.saveRecord.Visible = true;
+            labelChange.ShowDialog();
+            Close();
         }
         private void ComboBoxChanged(object sender, EventArgs e)
         {
