@@ -39,7 +39,7 @@ namespace TrainingBuddy
             MaximizeBox = false;
 
             //Main form with statistics table and getting stats from database
-            string[] training = File.ReadAllLines(@"C:\Users\Dennis\OneDrive\Dokument\C#\Statistik.txt");
+            string[] training = File.ReadAllLines(@"C:\Users\Dennis\OneDrive\Dokument\C#\TrainingBuddy\Statistik.txt");
             TableLayoutPanel mainGrid = new TableLayoutPanel { ColumnCount = 2, Dock = DockStyle.Fill };
             mainGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30));
             mainGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70));
@@ -205,7 +205,7 @@ namespace TrainingBuddy
             // Copy (set clipboard)
             Clipboard.SetDataObject(stats.GetClipboardContent());
             // Paste (get the clipboard and serialize it to a file)
-            File.WriteAllText(@"C:\Users\Dennis\OneDrive\Dokument\C#\Statistik.txt", Clipboard.GetText(TextDataFormat.CommaSeparatedValue));
+            File.WriteAllText(@"C:\Users\Dennis\OneDrive\Dokument\C#\TrainingBuddy\Statistik.txt", Clipboard.GetText(TextDataFormat.CommaSeparatedValue));
         }
         //Add picture given location method
         private PictureBox AddImage(string imageLocation)

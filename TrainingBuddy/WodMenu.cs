@@ -14,7 +14,7 @@ namespace TrainingBuddy
         private DataGridView WodDisplay = new DataGridView { ColumnHeadersVisible = false, Enabled = false, Font = new Font("San Serif", 15f), Dock = DockStyle.Fill, ReadOnly = true, ColumnCount = 1, AutoSize = true, AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill, RowHeadersVisible = false, BackgroundColor = SystemColors.Control, BorderStyle = BorderStyle.None, AllowUserToAddRows = false, AllowUserToDeleteRows = false, AllowUserToResizeColumns = false, AllowUserToResizeRows = false };
         private ComboBox GetWod = new ComboBox { Font = new Font("San Serif", 15f), Dock = DockStyle.Right, AutoCompleteMode = AutoCompleteMode.SuggestAppend, AutoCompleteSource = AutoCompleteSource.ListItems };
         private Label TabZero = new Label();
-        private string[] wod = File.ReadAllLines(@"C:\Users\Dennis\OneDrive\Dokument\C#\WodDatabase.txt");
+        private string[] wod = File.ReadAllLines(@"C:\Users\Dennis\OneDrive\Dokument\C#\TrainingBuddy\WodDatabase.txt");
         
         public WodMenu()
         {

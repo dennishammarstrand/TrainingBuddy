@@ -1,0 +1,9 @@
+1,Backsquat,110
+2,Benchpres,100
+3,Clean & Jerk,105
+4,Deadlift,150
+5,Frontsquat,90
+6,Pullup,50
+7,Snatch,80
+8,Push Press,50
+9,Clean,90
