@@ -19,6 +19,8 @@ namespace TrainingBuddy
         bool on = true;
         public Label TabZeroWorkoutChange = new Label { Font = new Font("San Serif", 15f), Anchor = AnchorStyles.Left, AutoSize = true, Dock = DockStyle.Fill };
         public Button saveRecord = new Button { Visible = false, Text = "Save Record", Dock = DockStyle.Fill, AutoSize = true, Anchor = AnchorStyles.Left };
+        private WodSavedRecord record = new WodSavedRecord();
+        private List<WodSavedRecord> SaveRecordsToFile = new List<WodSavedRecord>();
 
         public TimerMenu()
         {
@@ -65,6 +67,20 @@ namespace TrainingBuddy
             reset.Click += ResetStopwatch;
             mainMenu.Click += ReturnToMainWindow;
             split.Click += SplitTimesHandler;
+            saveRecord.Click += SaveRecordClickHandler;
+        }
+        private void SaveRecordClickHandler(object sender, EventArgs e)
+        {
+            record = new WodSavedRecord { WodName = TabZeroWorkoutChange.Text, WodRecordTime = Watch.Text };
+            SaveRecordsToFile.Add(record);
+            string[] saveFile = new string[SaveRecordsToFile.Count];
+            int counter = 0;
+            foreach (WodSavedRecord item in SaveRecordsToFile)
+            {
+                saveFile[counter] = item.WodName + "," + item.WodRecordTime;
+                counter++;
+            }
+            File.WriteAllLines(@"C:\Users\Dennis\OneDrive\Dokument\C#\TrainingBuddy\WodRecords.txt", saveFile);
         }
         //Stopwatch methods
         private void ReturnToMainWindow(object sender, EventArgs e)
